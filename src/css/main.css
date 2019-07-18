@@ -1,0 +1,360 @@
+.map-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+#baget-wrapper > * {
+    pointer-events: none;
+}
+
+#baget-wrapper #labels {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#bot-caption {
+    font-size: 10px;
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    left: -3px;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#bot-caption #labels {
+    font-family: proxima-nova, Arial, Open Sans, sans-serif;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), color-stop(50%, #fff), color-stop(50%, #fff));
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, #fff 50%, #fff 0);
+    padding: 16.5em 2.7em 7.5em;
+    margin-right: 2px;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+#bot-caption #labels #country,
+#bot-caption #labels #headline,
+#bot-caption #labels #latlon {
+    display: block;
+    text-align: center;
+    line-height: 1;
+}
+
+#bot-caption #labels #headline > span {
+    font-weight: 700;
+    font-size: 6.75em;
+    letter-spacing: .225em;
+    text-indent: .225em;
+}
+
+#bot-caption #labels #country > span,
+#bot-caption #labels #headline > span,
+#bot-caption #labels #latlon > span {
+    display: inline-block;
+    text-transform: uppercase !important;
+    position: relative;
+}
+
+#bot-caption #labels #country {
+    overflow: hidden;
+}
+
+.white-border #labels {
+    margin: 0 -1px -2px;
+    width: calc(100% + 2px);
+}
+
+
+#bot-caption #labels #country > span {
+    font-weight: 400;
+    font-size: 3.3em;
+    letter-spacing: .75em;
+    text-indent: .75em;
+    line-height: 2.3;
+    margin: .75em 0;
+    padding: 0 1.5em;
+}
+
+#bot-caption #labels #country > span:after,
+#bot-caption #labels #country > span:before {
+    content: "";
+    display: block;
+    width: 4.5em;
+    position: absolute;
+    top: calc(50% - .105em);
+    background-color: #000;
+    height: .23em;
+}
+
+#bot-caption #labels #country > span:before {
+    left: 100%;
+}
+
+#bot-caption #labels #country > span:after {
+    right: 100%;
+}
+
+#bot-caption #labels #latlon > span {
+    font-weight: 300;
+    font-size: 2.7em;
+    letter-spacing: .15em;
+    text-indent: .15em;
+}
+
+
+#small-caption {
+    font-size: 15px;
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    left: -3px;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#small-caption #labels {
+    font-family: proxima-nova, Arial, Open Sans, sans-serif;
+    background: #fff;
+    padding: 1.5em 4.5em;
+    margin: 3em;
+}
+
+#design-elements #labels {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#small-caption #labels #country,
+#small-caption #labels #headline,
+#small-caption #labels #latlon {
+    display: block;
+    text-align: center;
+    line-height: 1;
+}
+
+#small-caption #labels #headline > span {
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: .3em;
+    text-indent: .3em;
+}
+
+#small-caption #labels #country > span,
+#small-caption #labels #headline > span,
+#small-caption #labels #latlon > span {
+    display: inline-block;
+    text-transform: uppercase !important;
+    position: relative;
+}
+
+#small-caption #labels #country > span {
+    font-weight: 400;
+    font-size: 1.95em;
+    letter-spacing: .45em;
+    text-indent: .45em;
+    line-height: 2.3;
+    margin: .3em 0 .75em;
+}
+
+#small-caption #labels #latlon > span {
+    font-weight: 400;
+    font-size: 1.8em;
+    color: #888;
+    letter-spacing: .15em;
+    text-indent: .15em;
+}
+
+#no-caption {
+  display:none;
+}
+
+.baget-border {
+    border: 3em solid #fff;
+
+}
+
+.white-border {
+    border: 2em solid #fff;
+
+}
+
+.baget-border::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: .4em solid #000;
+}
+
+.baget-border::after {
+    position: absolute;
+    content: '';
+    left: -.5em;
+    top: -.5em;
+    right: -.5em;
+    bottom: -.5em;
+    border: .15em solid #000;
+}
+
+.baget-border #labels {}
+
+.map-wrapper {
+    position: absolute;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.scaled * {
+    transform-origin: top left;
+}
+
+.scaled {
+    position: relative;
+    min-height: 580px;
+}
+
+.style-chooser {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.style-chooser input[type=radio] {
+    display: none;
+}
+
+.style-chooser .my-imaged-checkbox-wrapper {
+    padding: 5px;
+}
+
+.style-chooser input[type=radio] + label {
+    position: relative;
+    transition: 1s;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border: 2px solid #afafaf;
+    border-radius: 15px;
+}
+
+.style-chooser label img {
+    position: absolute;
+    width: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.style-chooser input[type=radio] + label::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: opacity 0.7s;
+}
+
+.style-chooser input[type=radio]:checked + label::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    opacity: 0.9;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url('../img/checked-symbol.svg');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 3;
+    transition: opacity 0.7s;
+}
+
+
+
+.labelStyleRadio {
+    display: none;
+}
+
+.styleSelector {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.styleSelector > * {
+    padding: 5px;
+}
+
+.leaflet-left {
+    left: 7%;
+}
+
+.leaflet-top {
+    top: 5%;
+}
+
+
+.text-small {
+  font-size:1rem;
+}
+
+.bg-dark {
+  color:#fff;
+}
+
+.bg-dark a {
+  color:#fff;
+  text-decoration: none;
+}
+
+.bg-dark a:hover {
+  color:#fff;
+  text-decoration: underline;
+}
