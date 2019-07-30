@@ -157,7 +157,7 @@ function changeMapStyle(style) {
 //make image out of map DOM
 function buildMap() {
 
-  let node = window.getElementsByClassName('map-container')[0];
+  let node = document.getElementsByClassName('map-container')[0];
   $('.leaflet-control-zoom').addClass('d-none');
   $('.baget').removeClass('baget-border');
 
